@@ -1,0 +1,48 @@
+{
+  "name": "dsh-sidebar-tidy",
+  "version": "0.1.0",
+  "description": "把 DSH Web GUI 的左侧栏收拾干净：默认只留工作区（品牌行 / 新会话 / 面板入口 / 底部设置收起），底部一键退出；退出后还能单独收起那组入口。状态记在 localStorage。",
+  "author": "LoktLin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoktLin/dsh-sidebar-tidy.git"
+  },
+  "homepage": "https://github.com/LoktLin/dsh-sidebar-tidy#readme",
+  "bugs": {
+    "url": "https://github.com/LoktLin/dsh-sidebar-tidy/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "sidebar",
+    "ui"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/sidebar-tidy.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  }
+}

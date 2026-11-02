@@ -723,6 +723,15 @@ console.log('\n=== dsh-sidebar-tidy 行为自检 ===\n');
   }
 }
 
+/* ⑪ 版本号不许漂移：客户端硬编码的那份必须等于 package.json */
+{
+  const pkg = JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+  const src = fs.readFileSync(new URL('../lib/client.js', import.meta.url), 'utf8');
+  const m = /const VERSION = '([^']+)';/.exec(src);
+  eq('⑪ client.js 的 VERSION 与 package.json 一致', m && m[1], pkg.version);
+  ok('⑪ 许可声明是 GPL-3.0-only', pkg.license === 'GPL-3.0-only', pkg.license);
+}
+
 /* ────────────────────────── 收尾 ────────────────────────── */
 
 console.log('\n合计：' + pass + ' 项 ✅ / ' + fails.length + ' 项 ❌');

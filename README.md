@@ -99,6 +99,8 @@ dsh plugin --profile web add ./dsh-sidebar-tidy
 - 排障：`curl http://127.0.0.1:3080/sidebar-tidy/status`，或在浏览器控制台跑 `window.__dshSidebarTidy.status()`。
 - 状态都存在浏览器 `localStorage`：`dsh.sidebarTidy.zen`（极简）、`.folded`（折叠）、`.abbr`（缩写开关）、`.color`（标色开关）、`.marks`（你标的颜色）。
 
-## License
+## 许可
 
-MIT
+**GPL-3.0-only** —— 随便用、随便改、随便再分发。只要求一件事：你改完再发出去的时候，改出来的部分也要按同样的许可开源。
+
+完整条款见 [LICENSE](LICENSE)。版权归 LoktLin。

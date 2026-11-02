@@ -1,9 +1,9 @@
 {
   "name": "dsh-sidebar-tidy",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "把 DSH Web GUI 的左侧栏收拾干净：默认只留工作区（品牌行 / 新会话 / 面板入口 / 底部设置收起），底部一键退出；退出后还能单独收起那组入口。状态记在 localStorage。",
   "author": "LoktLin",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LoktLin/dsh-sidebar-tidy.git"
